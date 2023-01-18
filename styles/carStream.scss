@@ -1,0 +1,74 @@
+.car-stream {
+  width: 100%;
+  height: 100vh;
+  .websoc-connect {
+    background-color: rgb(2, 161, 214);
+    position: absolute;
+    padding: 5px 20px;
+    top: 10px;
+    right: 40px;
+    border-radius: 5px;
+  }
+  .websoc-rpm {
+    position: absolute;
+    color: aqua;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(39, 39, 39, 0.64);
+    padding: 20px 50px;
+    border-top-left-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h4 {
+      color: rgb(0, 234, 101);
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: 100;
+    }
+    span {
+      font-size: 3.5rem;
+      font-weight: 900;
+    }
+  }
+  .websoc-dd {
+    left: 5px;
+    bottom: 5px;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    .websoc-dir {
+      background-image: linear-gradient(
+        to right,
+        rgb(18, 247, 133),
+        rgb(0, 255, 242)
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 20px;
+      border-radius: 5px;
+      text-transform: capitalize;
+      span {
+        color: rgb(255, 0, 0);
+        font-weight: 900;
+        font-size: 20px;
+        margin-left: 5px;
+      }
+    }
+    .websoc-deg {
+      background-color: bisque;
+      padding: 4px 10px;
+      font-size: 20px;
+      border-radius: 6px;
+      position: relative;
+      &::after {
+        content: "o";
+        font-size: 10px;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}

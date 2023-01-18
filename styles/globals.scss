@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "carStream.scss";
+html{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::selection {
+  background-color: #ddd;
+  color: #222;
+}
+.car-conteiner {
+  width: 100%;
+  h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    animation: title 0.5s 0.1s ease-in-out forwards;
+    opacity: 0;
+  }
+  p {
+    color: #aaa;
+    margin-top: -20px;
+    font-size: 18px;
+    animation: title 0.5s 0.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  button {
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: button 0.5s 0.9s ease-in-out forwards;
+    opacity: 0;
+    &:hover {
+      background-color: transparent;
+      color: #ddd;
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.129);
+    }
+  }
+}
+
+@keyframes title {
+  100% {
+    transform: translate(0, -50px);
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  0% {
+    transform: translate(-50px, -50px);
+  }
+  100% {
+    transform: translate(0, -50px);
+    opacity: 1;
+  }
+}
+// after get started
+@keyframes offtitle {
+  0% {
+    transform: translate(0, -50px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, -150px);
+    opacity: 0;
+  }
+}
+
+@keyframes offbutton {
+  0% {
+    transform: translate(0, -50px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(30px, -50px);
+  }
+  100% {
+    transform: translate(-150px, -50px);
+    opacity: 0;
+  }
+}
